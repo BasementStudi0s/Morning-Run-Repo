@@ -3,6 +3,8 @@ class_name State
 
 @export var particles : Array
 @onready var cn = get_parent()
+'''ln : logic node'''
+@export var ln : Node
 
 signal Transitioned
 

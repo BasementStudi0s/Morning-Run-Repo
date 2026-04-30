@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://cp1t0be7xmebo" path="res://scripts/state_machine.gd" id="2_g2els"]
 [ext_resource type="Script" uid="uid://m52n1er3s4cp" path="res://scripts/states/ent/run.gd" id="3_qhqgy"]
 [ext_resource type="Script" uid="uid://cggqf6xaq6t1n" path="res://scripts/logic_player.gd" id="4_dqkch"]
+[ext_resource type="Script" uid="uid://buluv67ymrena" path="res://scripts/states/ent/inAir.gd" id="4_qlg0r"]
+[ext_resource type="Script" uid="uid://eukykvrelujh" path="res://scripts/states/ent/idle.gd" id="5_tuyoq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
 size = Vector2(16, 32)
@@ -22,11 +24,21 @@ offset_bottom = 16.0
 
 [node name="StateMachine" type="Node" parent="." unique_id=266046086 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_g2els")
-initial_state = NodePath("run")
+initial_state = NodePath("inair")
 
-[node name="run" type="Node" parent="StateMachine" unique_id=157512664]
+[node name="idle" type="Node" parent="StateMachine" unique_id=935290779 node_paths=PackedStringArray("ln")]
+script = ExtResource("5_tuyoq")
+ln = NodePath("../logic")
+metadata/_custom_type_script = "uid://eukykvrelujh"
+
+[node name="run" type="Node" parent="StateMachine" unique_id=157512664 node_paths=PackedStringArray("ln")]
 script = ExtResource("3_qhqgy")
+ln = NodePath("../logic")
 metadata/_custom_type_script = "uid://m52n1er3s4cp"
+
+[node name="inair" type="Node" parent="StateMachine" unique_id=1054796035]
+script = ExtResource("4_qlg0r")
+metadata/_custom_type_script = "uid://buluv67ymrena"
 
 [node name="logic" type="Node" parent="StateMachine" unique_id=844574299]
 script = ExtResource("4_dqkch")

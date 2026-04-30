@@ -8,10 +8,9 @@ var states : Dictionary = {}
 
 func _ready() -> void:
 	#pass player reference to state children nodes
-	for i in get_children().size():
-		get_children()[i].cn = get_parent()
 	for child in get_children():
 		if child is State:
+			child.cn = get_parent()
 			states[child.name.to_lower()] = child
 			child.Transitioned.connect(on_child_transition)
 	if initial_state:
@@ -20,6 +19,7 @@ func _ready() -> void:
 		current_state = initial_state
 
 func _process(delta: float) -> void:
+	print(current_state)
 	if current_state:
 		current_state.Update(delta)
 
