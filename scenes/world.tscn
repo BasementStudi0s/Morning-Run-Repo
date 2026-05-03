@@ -14,7 +14,9 @@ scale = Vector2(71.83267, 3.789368)
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1119757941]
 
 [node name="StaticBody2D" parent="." unique_id=2002443117 instance=ExtResource("1_rwgxs")]
-position = Vector2(-134, 33)
+position = Vector2(146.00002, -183)
+scale = Vector2(11.660799, 32.898384)
 
-[node name="StaticBody2D2" parent="." unique_id=894367117 instance=ExtResource("1_rwgxs")]
-position = Vector2(84, 34)
+[node name="StaticBody2D2" parent="." unique_id=1316761161 instance=ExtResource("1_rwgxs")]
+position = Vector2(-263.99994, -188)
+scale = Vector2(11.660799, 32.898384)

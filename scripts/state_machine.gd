@@ -19,7 +19,6 @@ func _ready() -> void:
 		current_state = initial_state
 
 func _process(delta: float) -> void:
-	print(current_state)
 	if current_state:
 		current_state.Update(delta)
 
@@ -40,7 +39,9 @@ func on_child_transition(state, new_state_name):
 	new_state.Enter_State()
 	current_state = new_state
 
-func change_state(new_state):
+func change_state(new_state, discreet = false):
+	if discreet and current_state == states[new_state]:
+		return
 	if states.has(new_state):
 		new_state = states[new_state]
 		if current_state:

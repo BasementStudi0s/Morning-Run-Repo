@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://cggqf6xaq6t1n" path="res://scripts/logic_player.gd" id="4_dqkch"]
 [ext_resource type="Script" uid="uid://buluv67ymrena" path="res://scripts/states/ent/inAir.gd" id="4_qlg0r"]
 [ext_resource type="Script" uid="uid://eukykvrelujh" path="res://scripts/states/ent/idle.gd" id="5_tuyoq"]
+[ext_resource type="Script" uid="uid://c5jucixcc8a52" path="res://scenes/del this later.gd" id="7_fjrip"]
+[ext_resource type="Script" uid="uid://t4h8s4xs8pub" path="res://scripts/states/ent/wallslide.gd" id="7_smehm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]
 size = Vector2(16, 32)
@@ -36,9 +38,23 @@ script = ExtResource("3_qhqgy")
 ln = NodePath("../logic")
 metadata/_custom_type_script = "uid://m52n1er3s4cp"
 
-[node name="inair" type="Node" parent="StateMachine" unique_id=1054796035]
+[node name="inair" type="Node" parent="StateMachine" unique_id=1054796035 node_paths=PackedStringArray("ln")]
 script = ExtResource("4_qlg0r")
+ln = NodePath("../logic")
 metadata/_custom_type_script = "uid://buluv67ymrena"
+
+[node name="wallslide" type="Node" parent="StateMachine" unique_id=1311493107 node_paths=PackedStringArray("ln")]
+script = ExtResource("7_smehm")
+ln = NodePath("../logic")
+metadata/_custom_type_script = "uid://t4h8s4xs8pub"
 
 [node name="logic" type="Node" parent="StateMachine" unique_id=844574299]
 script = ExtResource("4_dqkch")
+
+[node name="del" type="Label" parent="." unique_id=611806408]
+offset_left = -16.0
+offset_top = -40.0
+offset_right = 24.0
+offset_bottom = -17.0
+text = "null"
+script = ExtResource("7_fjrip")
