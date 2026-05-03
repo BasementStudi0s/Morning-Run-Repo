@@ -5,6 +5,7 @@ class_name wallslide
 func Enter():
 	cn.gravityMult = .8
 	cn.velocity.y /= 2
+	cn.coyoteTimer = 0
 
 func Update(_delta: float):
 	'''
@@ -22,6 +23,6 @@ func Exit():
 	cn.gravityMult = 1
 	
 
-func getOff(offVel = 1000, jump = true):
+func getOff(offVel = 1200, jump = true):
 	cn.velocity.x = offVel * cn.get_wall_normal().x
 	if jump: cn.jump()

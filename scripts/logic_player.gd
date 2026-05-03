@@ -19,14 +19,20 @@ func _process(delta: float) -> void:
 	logi()
 	
 func logi():
+	print(cn.coyoteTimer)
+	if cn.is_on_floor():
+		cn.coyoteTimer = cn.coyoteTime
+		cn.coyoteDepartPos = cn.position
 	#sensing for wall slide
 	if cn.is_on_wall_only() and $"..".current_state.script == load("res://scripts/states/ent/inAir.gd"):
 		$"..".change_state('wallslide', true)
 		return #if you do this state you dont wanna try changing it more
 	
 	#sensing for jumping
-	if cn.is_on_floor(): #make it so that you can only jump during idle or run
+	if cn.is_on_floor() or cn.coyoteTimer > 0: #make it so that you can only jump during idle or run
 		if inputs['jump']:
+			cn.position.y = cn.coyoteDepartPos.y
+			cn.coyoteTimer = 0
 			cn.jump()
 			$"..".change_state('inair')
 			return
