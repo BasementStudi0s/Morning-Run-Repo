@@ -6,7 +6,7 @@
 [ext_resource type="Script" uid="uid://cggqf6xaq6t1n" path="res://scripts/logic_player.gd" id="4_dqkch"]
 [ext_resource type="Script" uid="uid://buluv67ymrena" path="res://scripts/states/ent/inAir.gd" id="4_qlg0r"]
 [ext_resource type="Script" uid="uid://eukykvrelujh" path="res://scripts/states/ent/idle.gd" id="5_tuyoq"]
-[ext_resource type="Script" uid="uid://c5jucixcc8a52" path="res://scenes/del this later.gd" id="7_fjrip"]
+[ext_resource type="Script" uid="uid://c5jucixcc8a52" path="res://scripts/del this later.gd" id="7_fjrip"]
 [ext_resource type="Script" uid="uid://t4h8s4xs8pub" path="res://scripts/states/ent/wallslide.gd" id="7_smehm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3vyb7"]

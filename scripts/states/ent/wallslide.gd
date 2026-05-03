@@ -3,7 +3,7 @@ extends State
 class_name wallslide
 
 func Enter():
-	cn.gravityMult = .8
+	cn.gravityMult = .4
 	cn.velocity.y /= 2
 	cn.coyoteTimer = 0
 

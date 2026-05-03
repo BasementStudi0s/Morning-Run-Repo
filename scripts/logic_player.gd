@@ -29,13 +29,13 @@ func logi():
 		return #if you do this state you dont wanna try changing it more
 	
 	#sensing for jumping
-	if cn.is_on_floor() or cn.coyoteTimer > 0: #make it so that you can only jump during idle or run
-		if inputs['jump']:
-			cn.position.y = cn.coyoteDepartPos.y
-			cn.coyoteTimer = 0
-			cn.jump()
-			$"..".change_state('inair')
-			return
+	if inputs['jump'] and (cn.is_on_floor() or cn.coyoteTimer > 0): #make it so that you can only jump during idle or run
+		cn.position.y = cn.coyoteDepartPos.y
+		cn.coyoteTimer = 0
+		cn.jump()
+		$"..".change_state('inair')
+		return
+	
 	if cn.is_on_wall() or cn.is_on_floor(): return #makes sure the player isnt ding any parkour stuff
 	
 	$"..".change_state('inair')
