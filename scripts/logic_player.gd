@@ -19,7 +19,6 @@ func _process(delta: float) -> void:
 	logi()
 	
 func logi():
-	print(cn.coyoteTimer)
 	if cn.is_on_floor():
 		cn.coyoteTimer = cn.coyoteTime
 		cn.coyoteDepartPos = cn.position
