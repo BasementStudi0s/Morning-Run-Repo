@@ -2,12 +2,11 @@ extends State
 
 class_name run
 
-func Enter():
-	pass
-
 func Update(_delta: float):
-	cn.friction()
-	if ln.vect == 0:
-		$"..".change_state('idle')
+	var speed = int(ln.inputs['sprint'])
+	var addedSpeed = speed * 500
+	cn.move(ln.vect, 1500 + addedSpeed, 1000 + addedSpeed)
+	if ln.vect:
+		cn.friction()
 	else:
-		cn.move(ln.vect)
+		$"..".change_state('idle')

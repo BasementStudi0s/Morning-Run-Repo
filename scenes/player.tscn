@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://iny1fesubq5o" path="res://scripts/physics.gd" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://cp1t0be7xmebo" path="res://scripts/state_machine.gd" id="2_g2els"]
 [ext_resource type="Script" uid="uid://m52n1er3s4cp" path="res://scripts/states/ent/run.gd" id="3_qhqgy"]
-[ext_resource type="Script" uid="uid://37bwcbffa7fb" path="res://scripts/states/ent/dash.gd" id="3_ur7pv"]
 [ext_resource type="Script" uid="uid://cggqf6xaq6t1n" path="res://scripts/logic_player.gd" id="4_dqkch"]
 [ext_resource type="Script" uid="uid://buluv67ymrena" path="res://scripts/states/ent/inAir.gd" id="4_qlg0r"]
 [ext_resource type="Script" uid="uid://eukykvrelujh" path="res://scripts/states/ent/idle.gd" id="5_tuyoq"]
@@ -28,10 +27,6 @@ offset_bottom = 16.0
 [node name="StateMachine" type="Node" parent="." unique_id=266046086 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("2_g2els")
 initial_state = NodePath("inair")
-
-[node name="dash" type="Node" parent="StateMachine" unique_id=349679267]
-script = ExtResource("3_ur7pv")
-metadata/_custom_type_script = "uid://37bwcbffa7fb"
 
 [node name="idle" type="Node" parent="StateMachine" unique_id=935290779 node_paths=PackedStringArray("ln")]
 script = ExtResource("5_tuyoq")

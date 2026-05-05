@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://dx6haw1xb6ddn" path="res://scenes/proto_barrier.tscn" id="1_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://cwu33kmqoxkir" path="res://scenes/player.tscn" id="2_4wyf3"]
-[ext_resource type="PackedScene" uid="uid://b6s0iwkumuy4e" path="res://scenes/chaser.tscn" id="3_4wyf3"]
 
 [node name="world" type="Node2D" unique_id=1804727197]
 
@@ -13,6 +12,8 @@ scale = Vector2(71.83267, 3.789368)
 [node name="player" parent="." unique_id=859033803 instance=ExtResource("2_4wyf3")]
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1119757941]
+position_smoothing_enabled = true
+position_smoothing_speed = 20.0
 
 [node name="StaticBody2D" parent="." unique_id=2002443117 instance=ExtResource("1_rwgxs")]
 position = Vector2(144, -216)
@@ -21,9 +22,6 @@ scale = Vector2(12.466742, 23.566673)
 [node name="StaticBody2D2" parent="." unique_id=1316761161 instance=ExtResource("1_rwgxs")]
 position = Vector2(-263.99994, -188)
 scale = Vector2(11.660799, 32.898384)
-
-[node name="chaser" parent="." unique_id=1618363955 instance=ExtResource("3_4wyf3")]
-position = Vector2(-82, -14)
 
 [node name="StaticBody2D3" parent="." unique_id=1958492422 instance=ExtResource("1_rwgxs")]
 position = Vector2(1033, 17)

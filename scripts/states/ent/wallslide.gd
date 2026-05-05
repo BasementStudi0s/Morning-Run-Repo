@@ -17,6 +17,7 @@ func Update(_delta: float):
 	
 	if ln.inputs['mjump']:
 		getOff()
+	if cn.is_on_floor(): $"..".change_state('idle')
 		
 
 func Exit():
