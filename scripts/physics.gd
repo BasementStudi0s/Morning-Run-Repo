@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 const grav = 3000
 var gravityMult = 1
-var coyoteTime = 10
+var coyoteTime = 3
 var coyoteTimer = 0
 var coyoteDepartPos = Vector2(0, 0)
 var downwardVel = 3
