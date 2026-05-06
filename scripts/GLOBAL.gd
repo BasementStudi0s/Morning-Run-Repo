@@ -9,3 +9,9 @@ var playerFollowPath = []
 func _process(delta: float) -> void:
 	#playerFollowPath.append(PLAYER.global_position)
 	pass
+
+func findGroupInBodies(l, g):
+	for i in l.size():
+		if l[i].is_in_group(g):
+			return true
+	return false

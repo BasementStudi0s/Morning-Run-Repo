@@ -3,7 +3,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r4mev"]
 size = Vector2(16, 16)
 
-[node name="StaticBody2D" type="StaticBody2D" unique_id=2002443117]
+[node name="StaticBody2D" type="StaticBody2D" unique_id=2002443117 groups=["collidable"]]
 
 [node name="proto barrier" type="ColorRect" parent="." unique_id=1593989016]
 offset_left = -8.0

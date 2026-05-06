@@ -1,4 +1,7 @@
 extends Label
 
 func _process(delta: float) -> void:
-	text = str($"../StateMachine".current_state.name)
+	var a = $"../StateMachine".name + ': ' + str($"../StateMachine".current_state.name)
+	var b = $"../phyShapeStateMachine".name + ': ' + str($"../phyShapeStateMachine".current_state.name)
+	text = a + ', ' + b
+	
