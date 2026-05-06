@@ -59,6 +59,9 @@ offset_bottom = 16.0
 script = ExtResource("2_g2els")
 initial_state = NodePath("idle")
 
+[node name="logic" type="Node" parent="StateMachine" unique_id=844574299]
+script = ExtResource("4_dqkch")
+
 [node name="idle" type="Node" parent="StateMachine" unique_id=935290779 node_paths=PackedStringArray("ln")]
 script = ExtResource("5_tuyoq")
 ln = NodePath("../logic")
@@ -78,9 +81,6 @@ metadata/_custom_type_script = "uid://buluv67ymrena"
 script = ExtResource("7_smehm")
 ln = NodePath("../logic")
 metadata/_custom_type_script = "uid://t4h8s4xs8pub"
-
-[node name="logic" type="Node" parent="StateMachine" unique_id=844574299]
-script = ExtResource("4_dqkch")
 
 [node name="slide" type="Node" parent="StateMachine" unique_id=1602506160 node_paths=PackedStringArray("ln")]
 script = ExtResource("10_d2wvv")

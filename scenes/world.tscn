@@ -28,5 +28,5 @@ position = Vector2(912.00006, 23.000002)
 scale = Vector2(62.25856, 9.380314)
 
 [node name="StaticBody2D4" parent="." unique_id=500937114 instance=ExtResource("1_rwgxs")]
-position = Vector2(774, -179)
+position = Vector2(765, -172)
 scale = Vector2(13.16344, 12.256425)
