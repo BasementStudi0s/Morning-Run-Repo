@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+class_name physics
+
 const grav = 3000
 var gravityMult = 1
 var coyoteTime = 3

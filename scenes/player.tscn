@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cwu33kmqoxkir"]
 
-[ext_resource type="Script" uid="uid://iny1fesubq5o" path="res://scripts/physics.gd" id="1_3vyb7"]
+[ext_resource type="Script" uid="uid://ckx807thip1dh" path="res://scripts/player.gd" id="1_jej6c"]
 [ext_resource type="Script" uid="uid://cp1t0be7xmebo" path="res://scripts/state_machine.gd" id="2_g2els"]
 [ext_resource type="Script" uid="uid://m52n1er3s4cp" path="res://scripts/states/ent/run.gd" id="3_qhqgy"]
 [ext_resource type="Shape2D" uid="uid://bwn3vcxmkek0p" path="res://collisionBoxes/playerPhyShape.tres" id="3_ur7pv"]
@@ -17,8 +17,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2wvv"]
 size = Vector2(16, 16)
 
-[node name="player" type="CharacterBody2D" unique_id=859033803]
-script = ExtResource("1_3vyb7")
+[node name="player" type="CharacterBody2D" unique_id=859033803 groups=["player"]]
+script = ExtResource("1_jej6c")
 
 [node name="phyShape" type="CollisionShape2D" parent="." unique_id=722889627]
 shape = ExtResource("3_ur7pv")

@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://dx6haw1xb6ddn" path="res://scenes/proto_barrier.tscn" id="1_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://cwu33kmqoxkir" path="res://scenes/player.tscn" id="2_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://cwbfk3akruf1g" path="res://scenes/hud.tscn" id="3_4wyf3"]
+[ext_resource type="PackedScene" uid="uid://dgajcuah0keby" path="res://scenes/bottle.tscn" id="4_k0juu"]
 
 [node name="world" type="Node2D" unique_id=1804727197]
 
@@ -24,9 +26,34 @@ position = Vector2(-263.99994, -188)
 scale = Vector2(11.660799, 32.898384)
 
 [node name="StaticBody2D3" parent="." unique_id=1958492422 instance=ExtResource("1_rwgxs")]
-position = Vector2(912.00006, 23.000002)
-scale = Vector2(62.25856, 9.380314)
+position = Vector2(1828, 23)
+scale = Vector2(162.09857, 9.380314)
 
 [node name="StaticBody2D4" parent="." unique_id=500937114 instance=ExtResource("1_rwgxs")]
 position = Vector2(889, -172)
 scale = Vector2(13.16344, 12.256425)
+
+[node name="StaticBody2D5" parent="." unique_id=1989197847 instance=ExtResource("1_rwgxs")]
+position = Vector2(1759, -396)
+scale = Vector2(13.16344, 12.256425)
+
+[node name="StaticBody2D6" parent="." unique_id=802408440 instance=ExtResource("1_rwgxs")]
+position = Vector2(2897, -360)
+scale = Vector2(13.16344, 12.256425)
+
+[node name="HUD" parent="." unique_id=1316331861 instance=ExtResource("3_4wyf3")]
+
+[node name="bottle" parent="." unique_id=1992526947 instance=ExtResource("4_k0juu")]
+position = Vector2(629, -80)
+
+[node name="bottle2" parent="." unique_id=1567731271 instance=ExtResource("4_k0juu")]
+position = Vector2(870, -300)
+
+[node name="bottle3" parent="." unique_id=9863262 instance=ExtResource("4_k0juu")]
+position = Vector2(907, -295)
+
+[node name="bottle4" parent="." unique_id=387848834 instance=ExtResource("4_k0juu")]
+position = Vector2(1254, -74)
+
+[node name="bottle5" parent="." unique_id=2097588976 instance=ExtResource("4_k0juu")]
+position = Vector2(12, -151)

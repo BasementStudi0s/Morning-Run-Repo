@@ -2,6 +2,7 @@ extends logic
 
 var vect = 0
 var oldVect = 0
+var sprinting = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -16,13 +17,18 @@ func _process(delta: float) -> void:
 		'right': Input.is_action_pressed('right'), 
 		'sprint': Input.is_action_pressed("sprint"),
 		'crouch': Input.is_action_pressed("crouch"), 
-		'mcrouch': Input.is_action_just_pressed("crouch")
+		'mcrouch': Input.is_action_just_pressed("crouch"), 
+		'dash': Input.is_action_pressed("dash"), 
+		'mdash': Input.is_action_just_pressed("dash")
 	}
 	
 	#vect variable uses left and right to make programming movement easier
 	vect = int(inputs['right']) - int(inputs['left'])
 	
+	sprinting = int(inputs['sprint'])
+	
 	logi()
+	
 	
 	oldVect = vect #keep this at end
 func logi():
@@ -36,12 +42,11 @@ func logi():
 		$"..".change_state('dash', true)
 	'''
 	
-	if inputs['mcrouch'] and cn.is_on_floor():
-		if vect:
-			$"..".change_state('slide', true)
-		else:
-			$"..".change_state('crouch', true)
+	if inputs['mdash'] and cn.is_on_floor() and vect and cn.hydration > 0:
+		$"..".change_state('slide', true)
 		return
+	if inputs['crouch']:
+		$"..".change_state('crouch', true)
 	
 	if cn.is_on_floor():
 		cn.canDash = true
