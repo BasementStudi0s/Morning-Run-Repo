@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bnstu6sj85tab"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a0avw"]
+size = Vector2(16, 16)
+
+[node name="bottle" type="Area2D" unique_id=1992526947]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1020950206]
+shape = SubResource("RectangleShape2D_a0avw")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=38798564]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+color = Color(0.5176471, 1, 1, 1)
