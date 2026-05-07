@@ -1,2 +1,1 @@
 *make coyote time teleportation fail proof so that you dont get teleported into a wall. 
-gbsdgbvusdgvhsbdjv
