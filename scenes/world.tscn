@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://dx6haw1xb6ddn" path="res://scenes/proto_barrier.tscn" id="1_rwgxs"]
 [ext_resource type="PackedScene" uid="uid://cwu33kmqoxkir" path="res://scenes/player.tscn" id="2_4wyf3"]
-[ext_resource type="PackedScene" uid="uid://b6s0iwkumuy4e" path="res://scenes/chaser.tscn" id="3_4wyf3"]
 
 [node name="world" type="Node2D" unique_id=1804727197]
 
@@ -31,6 +30,3 @@ scale = Vector2(62.25856, 9.380314)
 [node name="StaticBody2D4" parent="." unique_id=500937114 instance=ExtResource("1_rwgxs")]
 position = Vector2(889, -172)
 scale = Vector2(13.16344, 12.256425)
-
-[node name="chaser" parent="." unique_id=1618363955 instance=ExtResource("3_4wyf3")]
-position = Vector2(338, -75)
