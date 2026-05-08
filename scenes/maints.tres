@@ -1,0 +1,17 @@
+[gd_resource type="TileSet" format=3 uid="uid://bujv1vc7gfg4n"]
+
+[ext_resource type="Texture2D" uid="uid://daps5f2prq40e" path="res://textures/grass.png" id="1_obdj3"]
+[ext_resource type="PackedScene" uid="uid://bmessdxgwl1bn" path="res://scenes/spike.tscn" id="2_v7w5d"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hwdor"]
+texture = ExtResource("1_obdj3")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -8, -8, 8, -8, 8, 8)
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_53anu"]
+scenes/1/scene = ExtResource("2_v7w5d")
+
+[resource]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_hwdor")
+sources/1 = SubResource("TileSetScenesCollectionSource_53anu")
