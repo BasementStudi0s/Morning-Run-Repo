@@ -1,4 +1,4 @@
-extends Sprite2D
+extends Area2D
 
 
 var playerPath = []
@@ -16,3 +16,7 @@ func record():
 	if Global.PLAYER.position != oldPlayerPos:
 		playerPath.append(Global.PLAYER.position)
 	oldPlayerPos = Global.PLAYER.position
+
+
+func _on_body_entered(body: Node2D) -> void:
+	Global.PLAYER.damage(0.1)

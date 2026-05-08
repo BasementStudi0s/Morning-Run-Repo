@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cx4sy303q6l8r"]
+
+[ext_resource type="Script" uid="uid://xe6u2etdv40b" path="res://scripts/quit_button.gd" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://y5g2suosbphu" path="res://scripts/states/menuActive.gd" id="2_bqqt6"]
+[ext_resource type="Script" uid="uid://cp1t0be7xmebo" path="res://scripts/state_machine.gd" id="2_ekxnf"]
+[ext_resource type="Script" uid="uid://bet54s80fswyk" path="res://scripts/play_button.gd" id="3_wu84c"]
+
+[node name="StateMachine" type="Node" unique_id=1980806403 node_paths=PackedStringArray("initial_state")]
+script = ExtResource("2_ekxnf")
+initial_state = NodePath("main")
+
+[node name="main" type="Node" parent="." unique_id=459814703]
+script = ExtResource("2_bqqt6")
+metadata/_custom_type_script = "uid://y5g2suosbphu"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="main" unique_id=1827340417]
+
+[node name="ColorRect" type="ColorRect" parent="main/CanvasLayer" unique_id=1126377403]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="playButton" type="Button" parent="main/CanvasLayer" unique_id=875272930]
+offset_left = 488.0
+offset_top = 224.0
+offset_right = 672.0
+offset_bottom = 304.0
+text = "Play"
+script = ExtResource("3_wu84c")
+
+[node name="quitButton" type="Button" parent="main/CanvasLayer" unique_id=2095010696]
+offset_left = 488.0
+offset_top = 320.0
+offset_right = 672.0
+offset_bottom = 400.0
+text = "Quit"
+script = ExtResource("1_l6cm7")
+
+[node name="levels" type="Node" parent="." unique_id=1183368624]
+script = ExtResource("2_bqqt6")
+metadata/_custom_type_script = "uid://y5g2suosbphu"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="levels" unique_id=793730945]
+
+[connection signal="button_down" from="main/CanvasLayer/playButton" to="main/CanvasLayer/playButton" method="_on_button_down"]
+[connection signal="button_down" from="main/CanvasLayer/quitButton" to="main/CanvasLayer/quitButton" method="_on_button_down"]

@@ -1,16 +1,18 @@
 [gd_scene format=3 uid="uid://b6s0iwkumuy4e"]
 
-[ext_resource type="Texture2D" uid="uid://cvgoah2jthhtp" path="res://textures/icon.svg" id="1_3tnia"]
 [ext_resource type="Script" uid="uid://bu3ohexhttwla" path="res://scripts/chaser.gd" id="2_abhlf"]
 [ext_resource type="Script" uid="uid://cp1t0be7xmebo" path="res://scripts/state_machine.gd" id="3_cyd77"]
 [ext_resource type="Script" uid="uid://dr5838nl0ulwt" path="res://scripts/states/chase.gd" id="4_cyd77"]
 [ext_resource type="Script" uid="uid://o2x5gduct106" path="res://scripts/stateNone.gd" id="5_7iohh"]
 
-[node name="chaser" type="Sprite2D" unique_id=1618363955]
-position = Vector2(0, 2.3841858e-07)
-scale = Vector2(0.12499999, 0.24999999)
-texture = ExtResource("1_3tnia")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cyd77"]
+size = Vector2(16, 32)
+
+[node name="chaser" type="Area2D" unique_id=1084459857]
 script = ExtResource("2_abhlf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=334802969]
+shape = SubResource("RectangleShape2D_cyd77")
 
 [node name="StateMachine" type="Node" parent="." unique_id=867960036 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("3_cyd77")
@@ -25,6 +27,15 @@ script = ExtResource("5_7iohh")
 metadata/_custom_type_script = "uid://o2x5gduct106"
 
 [node name="Timer" type="Timer" parent="." unique_id=663174998]
+wait_time = 2.0
 autostart = true
 
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1602623693]
+offset_left = -8.0
+offset_top = -16.0
+offset_right = 8.0
+offset_bottom = 16.0
+color = Color(0, 0, 0, 1)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

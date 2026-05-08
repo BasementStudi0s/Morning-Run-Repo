@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cwbfk3akruf1g"]
 
-[ext_resource type="Script" uid="uid://bdjsjuck8ldqs" path="res://scenes/hp_bar.gd" id="1_oo0fn"]
-[ext_resource type="Script" uid="uid://ujp1drmph08o" path="res://scenes/hydro_bar.gd" id="2_5ysmq"]
+[ext_resource type="Script" uid="uid://bdjsjuck8ldqs" path="res://scripts/hp_bar.gd" id="1_oo0fn"]
+[ext_resource type="Script" uid="uid://ujp1drmph08o" path="res://scripts/hydro_bar.gd" id="2_5ysmq"]
 
 [node name="HUD" type="Control" unique_id=1316331861]
 layout_mode = 3
