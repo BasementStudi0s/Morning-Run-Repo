@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://cwu33kmqoxkir" path="res://scenes/player.tscn" id="2_4wyf3"]
 [ext_resource type="PackedScene" uid="uid://cwbfk3akruf1g" path="res://scenes/hud.tscn" id="3_4wyf3"]
-[ext_resource type="PackedScene" uid="uid://b6s0iwkumuy4e" path="res://scenes/chaser.tscn" id="5_71j4m"]
 [ext_resource type="PackedScene" uid="uid://ctilqjt4gd7gm" path="res://scenes/lvl_1.tscn" id="5_qfnet"]
 [ext_resource type="PackedScene" uid="uid://cx4sy303q6l8r" path="res://scenes/main_menu.tscn" id="6_qfnet"]
 
@@ -22,11 +21,8 @@ zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 20.0
 
-[node name="chaser" parent="level" unique_id=1084459857 instance=ExtResource("5_71j4m")]
-position = Vector2(-252, 17)
-
 [node name="lvl1" parent="level" unique_id=1030139830 instance=ExtResource("5_qfnet")]
 
 [connection signal="body_entered" from="level/lvl1/spike" to="level/lvl1/spike" method="_on_body_entered"]
-[connection signal="body_entered" from="level/lvl1/@Area2D@268882" to="level/lvl1/@Area2D@268882" method="_on_body_entered"]
-[connection signal="body_entered" from="level/lvl1/@Area2D@268883" to="level/lvl1/@Area2D@268883" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl1/@Area2D@274219" to="level/lvl1/@Area2D@274219" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl1/@Area2D@274220" to="level/lvl1/@Area2D@274220" method="_on_body_entered"]
