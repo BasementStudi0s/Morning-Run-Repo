@@ -2,7 +2,8 @@ extends State
 
 class_name inair
 
-
+func Enter():
+	cn.playAnim('inair')
 func Update(_delta: float):
 	cn.coyoteTimer -= 1
 	cn.friction(.1)

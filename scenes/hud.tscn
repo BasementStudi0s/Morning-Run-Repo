@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://bdjsjuck8ldqs" path="res://scripts/hp_bar.gd" id="1_oo0fn"]
 [ext_resource type="Script" uid="uid://ujp1drmph08o" path="res://scripts/hydro_bar.gd" id="2_5ysmq"]
+[ext_resource type="Script" uid="uid://jpmq1d2wfjr0" path="res://scenes/dist_bar.gd" id="3_5ysmq"]
+[ext_resource type="Texture2D" uid="uid://c4ohikxhx6v56" path="res://textures/jeff.png" id="4_uo2fv"]
+[ext_resource type="Texture2D" uid="uid://b4jkj44gvkulv" path="res://textures/playerIdle.png" id="5_047uy"]
 
 [node name="HUD" type="Control" unique_id=1316331861]
 layout_mode = 3
@@ -18,7 +21,7 @@ offset_right = 576.0
 offset_bottom = 27.0
 theme_override_colors/font_color = Color(0.9389866, 0, 0, 1)
 max_value = 1.0
-step = 9.999999999999999e-05
+step = 0.0001
 value = 0.5
 script = ExtResource("1_oo0fn")
 
@@ -29,6 +32,16 @@ offset_bottom = 59.0
 theme_override_colors/font_color = Color(0, 0.9490196, 0.9490196, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 max_value = 1.0
-step = 9.999999999999999e-05
+step = 0.0001
 value = 0.5
 script = ExtResource("2_5ysmq")
+
+[node name="distBar" type="Sprite2D" parent="CanvasLayer" unique_id=1470596226]
+position = Vector2(0, 624)
+script = ExtResource("3_5ysmq")
+
+[node name="pIcon" type="Sprite2D" parent="CanvasLayer/distBar" unique_id=1341830328]
+texture = ExtResource("5_047uy")
+
+[node name="cIcon" type="Sprite2D" parent="CanvasLayer/distBar" unique_id=661923804]
+texture = ExtResource("4_uo2fv")

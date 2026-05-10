@@ -7,10 +7,10 @@ var playerFollowPath = []
 @onready var LEVEL = WORLD.get_node('level')
 @onready var PLAYER = LEVEL.get_node('player')
 @onready var MAINMENU = WORLD.get_node('mainMenu')
+@onready var CHASER = null
 
-func _process(delta: float) -> void:
-	#playerFollowPath.append(PLAYER.global_position)
-	if Input.is_action_just_pressed('dev'): reloadLevel()
+func _ready() -> void:
+	reloadLevel()
 
 func findGroupInBodies(l, g):
 	for i in l.size():
@@ -25,6 +25,7 @@ func reloadLevel():
 	var newLevel = load(nNew).instantiate()
 	LEVEL.add_child(newLevel)
 	newLevel.name = 'lvl'
+	CHASER = LEVEL.get_node('lvl').get_node('chaser')
 
 
 

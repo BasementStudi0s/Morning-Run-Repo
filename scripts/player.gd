@@ -6,6 +6,8 @@ var moveSpeed = 500
 var maxSpeed = 1000
 var crouchMaxSpeed = 300
 
+@export var spr : AnimatedSprite2D
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	#hydration
@@ -27,3 +29,5 @@ func move(vect, max = maxSpeed, speed = moveSpeed):
 
 func damage(a):
 	hp -= a
+func playAnim(a):
+	spr.play(a)
