@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://bmessdxgwl1bn" path="res://scenes/spike.tscn" id="2_njee3"]
 [ext_resource type="PackedScene" uid="uid://d27aikkgpxrxl" path="res://scenes/flag.tscn" id="3_3f5e1"]
 [ext_resource type="PackedScene" uid="uid://c4tawmul7t6o6" path="res://scenes/player_spawn.tscn" id="4_njee3"]
+[ext_resource type="Texture2D" uid="uid://dtay31vfje3x3" path="res://textures/stone.png" id="5_sasf3"]
+[ext_resource type="Texture2D" uid="uid://bxv1hy4s1bky2" path="res://textures/dirt.png" id="6_xapyu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hwdor"]
 texture = ExtResource("1_d105i")
@@ -15,7 +17,19 @@ scenes/1/scene = ExtResource("2_njee3")
 scenes/2/scene = ExtResource("3_3f5e1")
 scenes/3/scene = ExtResource("4_njee3")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lk8w3"]
+texture = ExtResource("5_sasf3")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0mx8j"]
+texture = ExtResource("6_xapyu")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
+
 [resource]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_hwdor")
 sources/1 = SubResource("TileSetScenesCollectionSource_53anu")
+sources/2 = SubResource("TileSetAtlasSource_lk8w3")
+sources/3 = SubResource("TileSetAtlasSource_0mx8j")
