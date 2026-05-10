@@ -53,7 +53,7 @@ func logi():
 		cn.coyoteTimer = cn.coyoteTime
 		cn.coyoteDepartPos = cn.position
 	#sensing for wall slide
-	if cn.is_on_wall_only() and amInAir and cn.get_wall_normal().x == -vect:
+	if cn.is_on_wall_only() and amInAir:
 		$"..".change_state('wallslide', true)
 		return #if you do this state you dont wanna try changing it more
 	

@@ -14,3 +14,4 @@ func _process(delta: float) -> void:
 func _on_button_down() -> void:
 	$"../../..".change_state('levels')
 	Global.LEVEL.process_mode = Node.PROCESS_MODE_PAUSABLE
+	Global.reloadLevel()

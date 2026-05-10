@@ -9,7 +9,7 @@ func Update(_delta: float):
 	
 	if !ln.inputs['crouch'] and !$"../../checkArea".coll:
 		$"..".change_state('idle')
-	cn.move(ln.vect)
+	cn.move(ln.vect, cn.crouchMaxSpeed)
 	cn.friction()
 
 func Exit():

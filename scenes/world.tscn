@@ -15,14 +15,37 @@
 process_mode = 4
 
 [node name="player" parent="level" unique_id=859033803 instance=ExtResource("2_4wyf3")]
+position = Vector2(105, -39)
 
 [node name="Camera2D" type="Camera2D" parent="level/player" unique_id=1119757941]
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 position_smoothing_speed = 20.0
 
-[node name="lvl1" parent="level" unique_id=1030139830 instance=ExtResource("5_qfnet")]
+[node name="lvl" parent="level" unique_id=1030139830 instance=ExtResource("5_qfnet")]
 
-[connection signal="body_entered" from="level/lvl1/spike" to="level/lvl1/spike" method="_on_body_entered"]
-[connection signal="body_entered" from="level/lvl1/@Area2D@274219" to="level/lvl1/@Area2D@274219" method="_on_body_entered"]
-[connection signal="body_entered" from="level/lvl1/@Area2D@274220" to="level/lvl1/@Area2D@274220" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/spike" to="level/lvl/spike" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338004" to="level/lvl/@Area2D@338004" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338005" to="level/lvl/@Area2D@338005" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338006" to="level/lvl/@Area2D@338006" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338007" to="level/lvl/@Area2D@338007" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338008" to="level/lvl/@Area2D@338008" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338009" to="level/lvl/@Area2D@338009" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338010" to="level/lvl/@Area2D@338010" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338011" to="level/lvl/@Area2D@338011" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338012" to="level/lvl/@Area2D@338012" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338013" to="level/lvl/@Area2D@338013" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338014" to="level/lvl/@Area2D@338014" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338015" to="level/lvl/@Area2D@338015" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338016" to="level/lvl/@Area2D@338016" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338017" to="level/lvl/@Area2D@338017" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338018" to="level/lvl/@Area2D@338018" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338019" to="level/lvl/@Area2D@338019" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338020" to="level/lvl/@Area2D@338020" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338021" to="level/lvl/@Area2D@338021" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338022" to="level/lvl/@Area2D@338022" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338023" to="level/lvl/@Area2D@338023" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338024" to="level/lvl/@Area2D@338024" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338025" to="level/lvl/@Area2D@338025" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/@Area2D@338026" to="level/lvl/@Area2D@338026" method="_on_body_entered"]
+[connection signal="body_entered" from="level/lvl/flag" to="level/lvl/flag" method="_on_body_entered"]

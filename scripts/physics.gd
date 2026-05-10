@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	
 
-func move(vect, max = 1000, speed = 400):
+func move(vect, max = 500, speed = 1):
 	velocity.x += vect * speed
 	#max velocity
 	if abs(velocity.x) > max:
@@ -28,7 +28,7 @@ func friction(a = .6):
 	#friction
 	velocity.x -= velocity.x * a
 
-func jump(a = 1000):
+func jump(a = 800):
 	jumping = true
 	velocity.y = -a
 	

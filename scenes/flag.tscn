@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://d27aikkgpxrxl"]
+
+[ext_resource type="Script" uid="uid://cyh1odfn8abhv" path="res://scenes/flag.gd" id="1_76ss4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jkyk4"]
+size = Vector2(4, 24)
+
+[node name="flag" type="Area2D" unique_id=1510891434]
+script = ExtResource("1_76ss4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1402782948]
+position = Vector2(0, -4)
+shape = SubResource("RectangleShape2D_jkyk4")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1259668664]
+offset_left = -2.0
+offset_top = -16.0
+offset_right = 2.0
+offset_bottom = 8.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
