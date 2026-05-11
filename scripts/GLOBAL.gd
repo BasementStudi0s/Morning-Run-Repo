@@ -44,3 +44,9 @@ should return [0, 3, 5], becuase there is an 'a' at indexes 0, 3, 5
 '''
 func findMatching(l, v): #l stands for list, v stands for value
 	pass
+
+'''
+get the amount of times a value is present in the list
+'''
+func countItemsInList(l, v):
+	pass
