@@ -10,13 +10,12 @@ Our capstone project was designed to be an interactive parkour action game. With
 - **Feature 1**: The first feature of our game is enhancing hand eye coordination
 - **Feature 2**: The second feature of our game is it is capable of helping dementia patients, by using speed, strategy and spacial navagation
 - **Feature 3**: The third feature of our game is it is helpful with enhancing a stronger mindset
-- Add more features as applicable
 
 ## Technologies & Tools
-- Adobe Picture Editor
-- Adobe Audition Sound Effects
-- maddythorson
-- mathworks.com
+- Adobe Picture Editor (https://www.adobe.com/express/feature/image/editor)
+- Adobe Audition Sound Effects(https://www.adobe.com/products/audition/offers/adobeauditiondlcsfx.html)
+- maddythorson(https://maddythorson.medium.com/celeste-and-towerfall-physics-d24bd2ae0fc5)
+- mathworks.com(https://www.mathworks.com/help/stateflow/gs/get-started-introduction.html)
 
 ## directory Structure
 Below is an example of our directory tree structure.
