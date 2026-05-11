@@ -3,11 +3,11 @@
 
 ## Overview
 
-Brief description of your capstone project and its purpose. Explain what your app or project does and what utility it provides to a user.
+Our capstone project was designed to be an interactive parkour action game. With the intention and purpose of enhancing brain function, such as constant evaluation, making quick calculated desicions involving distance and movement, and enhancing mental spacial awareness. The game our team created also helps improve hand eye coordination and precition. Similar to physical parkour, virtual parkour encourages overcoming obsticals, leading to a tougher mindset. 
 
 ## Features
 
-- **Feature 1**: Description of key feature
+- **Feature 1**: The first feature of our game is 
 - **Feature 2**: Description of key feature
 - **Feature 3**: Description of key feature
 - Add more features as applicable
@@ -15,17 +15,26 @@ Brief description of your capstone project and its purpose. Explain what your ap
 ## Technologies & Tools
 Provide a brief overview of some of the technologies, libraries, or tools used by your app / project.
 
-## Project Structure
+## directory Structure
 Below is an example of a directory tree structure. Please update / change this structure as needed to correctly reflect your apps design. 
 
 EXAMPLE STRUCTURE TO CHANGE
 ```
-capstone/
-├── src/                      # Source code
-├── tests/                    # Test files
-├── assets/                   # Static asset files
-├── README.md                 # This file
-└── .gitignore                # Git ignore rules
+morning-run-repo/
+├── src/                      
+├────── .git/
+├────── .godot/
+├────── .audio/
+├────── .collisionBoxes/ #holds collision box presets
+├────── .scenes/         #contains game objects and worlds
+├────── .script/         #contains code that runs the project
+├────── .sfx/
+├────── .texture/
+├────── .gitattributes/
+├────── .gitignore/
+├────── .project.godot/
+├────── .README.md/
+├────── .TODO.txt/            
 ```
 
 ## Installation & Setup
@@ -47,16 +56,17 @@ If your application has any known issues or cannot perform certain tasks / actio
 
 ## Authors & Team
 
-- **Project Lead**: [Your Name] - [Role]
-- **Team Member**: [Name] - [Role]
-- **Team Member**: [Name] - [Role]
+- **Project Lead**:[Emmett Wager] - [Manager/Programmer]
+- **Team Member**: [Joey Maurer] - [Artist/Programmer]
+- **Team Member**: [Avery Beechler] - [Game Tester/Script Writter]
+- **Team Member**: [Hailey Frost] - [Sound Effects/Script writter]
 
 ## Acknowledgments
 
-- Advisor/Professor: [Name]
-- Special thanks to: [Libraries, tools, or contributors]
-- [Any other acknowledgments]
+- Advisor/Professor: [Tim Robinson]
+- Special thanks to: [Adobe, MaddyThorson, MathWorks]
+- [Adobe Audition Sound Effects]
 
 ---
 
-**Last Updated**: Month/Day/Year
+**Last Updated**: 5/11/2026
