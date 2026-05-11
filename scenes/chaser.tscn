@@ -4,15 +4,16 @@
 [ext_resource type="Script" uid="uid://cp1t0be7xmebo" path="res://scripts/state_machine.gd" id="3_cyd77"]
 [ext_resource type="Script" uid="uid://dr5838nl0ulwt" path="res://scripts/states/chase.gd" id="4_cyd77"]
 [ext_resource type="Script" uid="uid://o2x5gduct106" path="res://scripts/stateNone.gd" id="5_7iohh"]
+[ext_resource type="Texture2D" uid="uid://c4ohikxhx6v56" path="res://textures/jeff.png" id="5_ao2mf"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_cyd77"]
-size = Vector2(16, 32)
+[sub_resource type="CircleShape2D" id="CircleShape2D_rp2g0"]
+radius = 5.0990195
 
 [node name="chaser" type="Area2D" unique_id=1084459857]
 script = ExtResource("2_abhlf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=334802969]
-shape = SubResource("RectangleShape2D_cyd77")
+shape = SubResource("CircleShape2D_rp2g0")
 
 [node name="StateMachine" type="Node" parent="." unique_id=867960036 node_paths=PackedStringArray("initial_state")]
 script = ExtResource("3_cyd77")
@@ -31,11 +32,16 @@ wait_time = 2.0
 autostart = true
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1602623693]
+visible = false
 offset_left = -8.0
 offset_top = -16.0
 offset_right = 8.0
 offset_bottom = 16.0
 color = Color(0, 0, 0, 1)
+
+[node name="Jeff" type="Sprite2D" parent="." unique_id=2029026812]
+texture_filter = 1
+texture = ExtResource("5_ao2mf")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

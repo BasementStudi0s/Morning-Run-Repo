@@ -82,3 +82,4 @@ dev={
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.76976186, 0.8092387, 0.99304134, 1)

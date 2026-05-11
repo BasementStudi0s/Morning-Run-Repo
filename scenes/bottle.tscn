@@ -1,21 +1,28 @@
 [gd_scene format=3 uid="uid://dgajcuah0keby"]
 
 [ext_resource type="Script" uid="uid://pphf813j41f2" path="res://scripts/bottle.gd" id="1_724mw"]
+[ext_resource type="Texture2D" uid="uid://dqrxc16kdbudo" path="res://textures/bottle.png" id="2_qr18b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_a0avw"]
-size = Vector2(16, 16)
+size = Vector2(4, 17)
 
 [node name="bottle" type="Area2D" unique_id=1992526947]
 script = ExtResource("1_724mw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1020950206]
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_a0avw")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=38798564]
+visible = false
 offset_left = -8.0
 offset_top = -8.0
 offset_right = 8.0
 offset_bottom = 8.0
 color = Color(0.5176471, 1, 1, 1)
+
+[node name="Bottle" type="Sprite2D" parent="." unique_id=1355823872]
+texture_filter = 1
+texture = ExtResource("2_qr18b")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

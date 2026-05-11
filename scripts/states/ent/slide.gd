@@ -6,6 +6,7 @@ var dir = 0
 var slideDist = 0
 
 func Enter():
+	cn.playAnim('slide')
 	cn.hydration -= 0.05
 	dir = ln.vect
 	cn.velocity.x = dir * (1000 + (ln.sprinting * 1000))

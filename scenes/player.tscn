@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://b4jkj44gvkulv" path="res://textures/playerIdle.png" id="14_f1ej7"]
 [ext_resource type="Texture2D" uid="uid://bqayakek0g35m" path="res://textures/playerInAir.png" id="15_oprun"]
 [ext_resource type="Texture2D" uid="uid://dsq5w08l3q0ti" path="res://textures/playerWalk.png" id="16_a8ls1"]
+[ext_resource type="Texture2D" uid="uid://1pxvdw0bflr4" path="res://textures/slide.png" id="17_fulsm"]
+[ext_resource type="Texture2D" uid="uid://ciaj4kgtgdqgd" path="res://textures/wallSlide.png" id="17_qfm1y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d2wvv"]
 size = Vector2(8, 8)
@@ -43,6 +45,10 @@ region = Rect2(96, 0, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_i4ail"]
 atlas = ExtResource("16_a8ls1")
 region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a38lo"]
+atlas = ExtResource("17_qfm1y")
+region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_qfm1y"]
 animations = [{
@@ -81,6 +87,22 @@ animations = [{
 "loop": true,
 "name": &"run",
 "speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_fulsm")
+}],
+"loop": true,
+"name": &"slide",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a38lo")
+}],
+"loop": true,
+"name": &"wallslide",
+"speed": 5.0
 }]
 
 [node name="player" type="CharacterBody2D" unique_id=859033803 node_paths=PackedStringArray("spr") groups=["player"]]
@@ -173,5 +195,4 @@ script = ExtResource("7_fjrip")
 [node name="sprite2d" type="AnimatedSprite2D" parent="." unique_id=1129354852]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_qfm1y")
-animation = &"run"
-frame_progress = 0.619586
+animation = &"slide"

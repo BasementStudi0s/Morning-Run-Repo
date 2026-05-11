@@ -13,9 +13,11 @@ func _process(delta: float) -> void:
 	#hydration
 	hydration = clamp(hydration, 0, 1)
 	hp = clamp(hp, 0, 1)
-	
+	if hp <= 0:
+		Global.reloadLevel()
 	if hydration <= 0:
 		hp -= 0.001
+		
 	if hydration >= 0.2:
 		hp += 0.001
 	
@@ -25,6 +27,7 @@ func jump(a = 500):
 
 func move(vect, max = maxSpeed, speed = moveSpeed):
 	super(vect, max, speed)
+	if vect: spr.scale.x = vect
 	hydration -= 0.0001 + ($StateMachine/logic.sprinting * 0.0001)
 
 func damage(a):

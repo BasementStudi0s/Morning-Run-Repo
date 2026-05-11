@@ -19,6 +19,8 @@ func findGroupInBodies(l, g):
 	return false
 
 func reloadLevel():
+	PLAYER.hp = 1
+	PLAYER.hydration = 1
 	var n = LEVEL.get_node('lvl')
 	var nNew = n.scene_file_path
 	n.free()

@@ -3,6 +3,7 @@ extends State
 class_name wallslide
 
 func Enter():
+	cn.playAnim('wallslide')
 	cn.gravityMult = .4
 	cn.velocity.y /= 2
 	cn.coyoteTimer = 0
