@@ -7,16 +7,19 @@ Our capstone project was designed to be an interactive parkour action game. With
 
 ## Features
 
-- **Feature 1**: The first feature of our game is 
-- **Feature 2**: Description of key feature
-- **Feature 3**: Description of key feature
+- **Feature 1**: The first feature of our game is enhancing hand eye coordination
+- **Feature 2**: The second feature of our game is it is capable of helping dementia patients, by using speed, strategy and spacial navagation
+- **Feature 3**: The third feature of our game is it is helpful with enhancing a stronger mindset
 - Add more features as applicable
 
 ## Technologies & Tools
-Provide a brief overview of some of the technologies, libraries, or tools used by your app / project.
+- Adobe Picture Editor
+- Adobe Audition Sound Effects
+- maddythorson
+- mathworks.com
 
 ## directory Structure
-Below is an example of a directory tree structure. Please update / change this structure as needed to correctly reflect your apps design. 
+Below is an example of our directory tree structure.
 
 EXAMPLE STRUCTURE TO CHANGE
 ```
@@ -37,22 +40,15 @@ morning-run-repo/
 ├────── .TODO.txt/            
 ```
 
-## Installation & Setup
-
-### Prerequisites
-List any software or installed medium that needs to be handled to correctly run and use your app / project. What must the user have in terms of dependencies to use this application successfully?
-
 ### Running the Application
-Describe how a new user would run your application after cloning the repo locally. What would this look like for a new user?
-
-## Usage
+The user would be able to execute the executable. For a new user they would have to open their file explorer, double click and run as an administrator, then they would open the command prompt. 
 
 ### Quick Overview of Using the Application
-Write a brief overview here of how the user would interact with the application in question and use it as you intended. What does working with this application look like? What are you supposed to do? Feel free to add subsections as needed to further describe how to use specific 
+ When a player uses the application, they will typically see their character on a grassy turf. The player is able to use the WASD keys to control the way the character moves and uses the down arrow to crouch. The player is capable of collecting water bottles they will add onto their water score, if a player runs out of water they will die and have to restart the level from the beginning. The player must face off against enemies, if an enemies defeats the player the player will restart the level from the begining, if the player wins they will move onto the next level(the second level in not made yet).
 
 
 ## Known Issues & Limitations
-If your application has any known issues or cannot perform certain tasks / actions, please list them here. 
+Our application has no issues, but as a limitation we only have one level made.
 
 ## Authors & Team
 
